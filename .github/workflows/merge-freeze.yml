@@ -1,0 +1,17 @@
+name: Merge Freeze
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  merge-freeze:
+    name: merge-freeze
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check merge freeze
+        run: |
+          echo "No active merge freeze."
+          exit 0
